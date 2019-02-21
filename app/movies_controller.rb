@@ -29,6 +29,13 @@ def can_be_created_in_a_block
   end
 end
 
+def can_be_created_in_a_block(args)
+ args = { title: "The Room", release_date: 2003 }
+        Movie.create do |m|
+        movie.title = "The Room"
+        movie.release_date = 2003
+      end
+   end
 
 
 def can_get_the_first_item_in_the_database
