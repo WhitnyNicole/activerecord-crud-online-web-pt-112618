@@ -29,14 +29,12 @@ def can_be_created_in_a_block
   end
 end
 
-
-
 def can_get_the_first_item_in_the_database
-  Movie.first
+  Movie.first.title
 end
 
 def can_get_the_last_item_in_the_database
-  Movie.last
+  Movie.last.title
 end
 
 def can_get_size_of_the_database
@@ -44,7 +42,7 @@ def can_get_size_of_the_database
 end
 
 def can_find_the_first_item_from_the_database_using_id
-  Movie.all.order(id: :desc).last
+  Movie.all.order(id: :desc).last.title
 end
 
 def can_find_by_multiple_attributes
@@ -95,4 +93,3 @@ def can_destroy_all_items_at_once
   end
   Movie.destroy_all
 end
-
